@@ -8,9 +8,11 @@ object PartialFunctions extends App{
   }
 
   println(aPartialFunction.isDefinedAt(6))
+
   println(aPartialFunction(2))
 
   private val liftedPartialFunction = aPartialFunction.lift
+
   println(liftedPartialFunction(2))
   println(liftedPartialFunction(3))
 

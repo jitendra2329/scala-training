@@ -1,5 +1,10 @@
 package com.knoldus
 
+
+//object HigherOrderFunctions {
+//  def apply = new HigherOrderFunctions
+//
+//}
 object HigherOrderFunctions extends App {
 
   private val higherOrderFunctions = new HigherOrderFunctions
@@ -15,6 +20,7 @@ object HigherOrderFunctions extends App {
   // use of map on list
   private val newListUsingMap = higherOrderFunctions.useOfMap(list)
   println(newListUsingMap)
+
 
   // use of flatMap
   private val listOfLists = List(List(3, 5, 4, 6), List(4, 9), List(8, 39))
@@ -46,7 +52,7 @@ class HigherOrderFunctions {
 
   // it will multiply each element of the list by 2 and return the new list
   private def useOfMap(list: List[Int]): List[Int] = {
-    list.map(_ * 2)
+    list.map(value => value * 2)
   }
 
   // it will first extract the list[Int] from the given list and then
@@ -55,6 +61,10 @@ class HigherOrderFunctions {
     list.flatMap { values =>
       values.map(_ * 3)
     }
+
+//    list.map { values =>
+//      values.map(_ * 3)
+//    }.flatten
   }
 
   // it will filter even values

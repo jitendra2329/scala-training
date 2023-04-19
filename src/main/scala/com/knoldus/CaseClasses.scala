@@ -25,9 +25,9 @@ object CaseClasses extends App {
 
   private def matchingUsers(listOfUser: List[User]): List[String] = {
     listOfUser.map {
-      case User("knol01", _, _) => "Jitendra"
-      case User("knol02", _, _) => "Ajit"
+      case User("knol01", _, age) if age == 24  => "Jitendra"
       case User("knol03", _, _) => "Manish"
+      case User("knol02", _, _) => "Ajit"
       case User(_, name, _) => s"$name"
     }
   }

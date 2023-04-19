@@ -5,6 +5,7 @@ object CurriedFunction extends App {
   private def curriedFunction(f: Int => Int): Int => Int = {
     (value: Int ) => f(value)
   }
+
   private val increment = curriedFunction((value: Int ) => value + 1 )
   println(increment(10))
 
