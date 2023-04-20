@@ -1,4 +1,4 @@
-package com.knoldus
+package com.knoldus.day1
 
 object PartialFunctions extends App{
   private val aPartialFunction: PartialFunction[Int, Int] = {

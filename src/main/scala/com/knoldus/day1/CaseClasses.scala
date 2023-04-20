@@ -1,5 +1,4 @@
-package com.knoldus
-
+package com.knoldus.day1
 
 object CaseClasses extends App {
   private val firstUser = User("knol01", "Jitendra", 24)

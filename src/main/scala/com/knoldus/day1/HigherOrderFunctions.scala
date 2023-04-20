@@ -1,5 +1,4 @@
-package com.knoldus
-
+package com.knoldus.day1
 
 //object HigherOrderFunctions {
 //  def apply = new HigherOrderFunctions

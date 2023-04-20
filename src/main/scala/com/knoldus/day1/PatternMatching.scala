@@ -1,7 +1,6 @@
-package com.knoldus
+package com.knoldus.day1
 
-
-import scala.util.{Random, Try, Success, Failure}
+import scala.util.{Failure, Random, Success, Try}
 
 
 object PatternMatching extends App {
@@ -83,7 +82,7 @@ object PatternMatching extends App {
 
 // defining a class Person
 class Person(val name: String)
-
+// val person = new Person ("syx")
 // making companion object of Person class
 object Person {
 

@@ -1,4 +1,4 @@
-package com.knoldus
+package com.knoldus.day1
 
 object ChatBot extends App{
 
