@@ -1,7 +1,6 @@
-package com.knoldus
+package com.knoldus.day1
 
-
-import scala.util.{Random, Try, Success, Failure}
+import scala.util.{Failure, Random, Success, Try}
 
 
 object PatternMatching extends App {
@@ -33,6 +32,7 @@ object PatternMatching extends App {
     case Animal(_, _) => println("No breed found.")
   }
 
+
   // pattern matching with Tuples
   private val tuple = Tuple2("Jitendra", 1882)
 
@@ -44,10 +44,17 @@ object PatternMatching extends App {
   // pattern matching with List
   private val list = List(4, 7, 2, 9, 1)
 
+  //  private def sum(list: List[Int]): Int = {
+  //    list match {
+  //      case Nil => throw new IllegalArgumentException("List is empty")
+  //      case head :: Nil => head
+  //      case head :: tail => head + sum(tail)
+  //    }
+  //  }
+
   private def sum(list: List[Int]): Int = {
     list match {
-      case Nil => throw new IllegalArgumentException("List is empty")
-      case head :: Nil => head
+      case Nil => 0
       case head :: tail => head + sum(tail)
     }
   }
@@ -69,12 +76,13 @@ object PatternMatching extends App {
 
   person match {
     case Person(name) => println(s"Person name is : $name")
+    case _ => println("No person found.")
   }
 }
 
 // defining a class Person
 class Person(val name: String)
-
+// val person = new Person ("syx")
 // making companion object of Person class
 object Person {
 
@@ -82,4 +90,9 @@ object Person {
   def unapply(person: Person): Option[String] = {
     Some(person.name)
   }
+
+  //  def unapply(note: Note): Option[(String, String, Int)] =
+  //    if (note eq null) None
+  //    else Some((note.name, note.duration, note.octave))
+  //}
 }
